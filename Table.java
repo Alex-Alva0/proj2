@@ -235,85 +235,64 @@ public class Table extends JFrame implements ActionListener
 
 	
 	void chooseCardPlayer1(Object src){
-		try{
-			if(src == p1Deck){
-				Card card = cardDeck.dealCard();
-				if (card != null){
-					p1Hand.addElement(card);
-					pickedCard(card);
-				}
-				else{
-					throw new Exception("no card");
-				}
-				if(cardDeck.getSizeOfDeck() == 0){
-					deckPile.setIcon(new ImageIcon(Card.directory + "blank.gif"));
-				}
+		if(src == p1Deck){
+			Card card = cardDeck.dealCard();
+			if (card != null){
+				p1Hand.addElement(card);
+				pickedCard(card);
 			}
-			if(p1Stack == src)
-			{
-				Card card = stackDeck.removeCard();
-				if(card != null)
-				{					
-					Card topCard = stackDeck.peek();
-					if (topCard != null)
-					{
-						topOfStack.setIcon(topCard.getCardImage());
-					}
-					else{
-						topOfStack.setIcon(new ImageIcon(Card.directory + "blank.gif"));
-					}    
-					p1Hand.addElement(card);
-					pickedCard(card);	
-				}
-				else{
-					throw new Exception();
-				}
+			if(cardDeck.getSizeOfDeck() == 0){
+				deckPile.setIcon(new ImageIcon(Card.directory + "blank.gif"));
 			}
 		}
-		catch(Exception e){
-			System.out.println("in loop 1");
-			System.out.println("no card taken");
-			chooseCardPlayer1(src);
+		if(p1Stack == src)
+		{
+			Card card = stackDeck.removeCard();
+			if(card != null)
+			{			
+				Card topCard = stackDeck.peek();
+				if (topCard != null)
+				{
+					topOfStack.setIcon(topCard.getCardImage());
+				}
+				else{
+					topOfStack.setIcon(new ImageIcon(Card.directory + "blank.gif"));
+				}
+				p1Hand.addElement(card);
+				pickedCard(card);	
+			}
 		}
 	}
 
 	void chooseCardPlayer2(Object src){
-			try{
-				if(src == p2Deck){
-					Card card = cardDeck.dealCard();
-					if (card != null){
-						p2Hand.addElement(card);
-						pickedCard(card);
-					
-					}
-					if(cardDeck.getSizeOfDeck() == 0){
-						deckPile.setIcon(new ImageIcon(Card.directory + "blank.gif"));
-					}
-				}
+		if(src == p2Deck){
+			Card card = cardDeck.dealCard();
+			if (card != null){
+				p2Hand.addElement(card);
+				pickedCard(card);
+			}
+			if(cardDeck.getSizeOfDeck() == 0){
+				deckPile.setIcon(new ImageIcon(Card.directory + "blank.gif"));
+			}
+		}
 		
-				if(p2Stack == src)
+		if(p2Stack == src)
+		{
+			Card card = stackDeck.removeCard();
+			if(card != null)
+			{				
+				Card topCard = stackDeck.peek();
+				if (topCard != null)
 				{
-					Card card = stackDeck.removeCard();
-					if(card != null)
-					{					
-						Card topCard = stackDeck.peek();
-						if (topCard != null)
-						{
-							topOfStack.setIcon(topCard.getCardImage());
-						}
-						else{
-							topOfStack.setIcon(new ImageIcon(Card.directory + "blank.gif"));
-						}    
-						p2Hand.addElement(card);
-						pickedCard(card);
-					}
+					topOfStack.setIcon(topCard.getCardImage());
 				}
+				else{
+					topOfStack.setIcon(new ImageIcon(Card.directory + "blank.gif"));
+				}
+				p2Hand.addElement(card);
+				pickedCard(card);
 			}
-			catch(Exception e){
-				System.out.println("in loop 2");
-				System.out.println("no card taken");
-			}
-
+		}
 	}
 	
 
@@ -332,6 +311,7 @@ public class Table extends JFrame implements ActionListener
 					discardCard(card);
 				}
 			}
+			System.out.println("PLayer1 now: " + p1Hand);
 			updateTurn();
 		}
 	}
@@ -351,6 +331,7 @@ public class Table extends JFrame implements ActionListener
 					discardCard(card);
 				}
 			}
+			System.out.println("PLayer2 now: " + p2Hand);
 			updateTurn();
 		}
 	}

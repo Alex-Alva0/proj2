@@ -1,0 +1,55 @@
+PLayer1: [9h, 4d, tc, 7c, jh, 5d, jc, 5h, 2c]
+PLayer2: [qh, 6d, 8s, ad, 5c, 3h, 9s, 9d, ah]
+Player 1: 
+Player 1: 
+Player 1: 
+Player 1: 
+Discarded:  4d
+Player 1: 
+Player 1: 
+Added:  8c
+Player 1: 
+Added:  kh
+Player 1: 
+Added:  8h
+Player 1: 
+PLayer1 now: [9h, tc, 7c, jh, 5d, jc, 5h, 2c, 8c, kh, 8h]
+Player 2: 
+Player 2: 
+Player 2: 
+Player 2: 
+Player 2: 
+Player 2: 
+Player 2: 
+Player 2: 
+Player 2: 
+Player 2: 
+Player 2: 
+Player 2: 
+Player 2: 
+Player 2: 
+Player 2: 
+Player 2: 
+Player 2: 
+Player 2: 
+Player 2: 
+Discarded:  6d
+PLayer2 now: [qh, 8s, ad, 5c, 3h, 9s, 9d, ah]
+Player 1: 
+Player 1: 
+Player 1: 
+Player 1: 
+Player 1: 
+Discarded:  7c
+Player 1: 
+Discarded:  tc
+PLayer1 now: [9h, jh, 5d, jc, 5h, 2c, 8c, kh, 8h]
+Player 2: 
+Player 2: 
+Player 2: 
+Added:  js
+Player 2: 
+Added:  jd
+Player 2: 
+Discarded:  9s
+PLayer2 now: [qh, 8s, ad, 5c, 3h, 9d, ah, js, jd]
